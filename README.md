@@ -5,6 +5,22 @@ Suppose we have an existing LegacyPrinter class with an incompatible interface t
 ```csharp
 using System;
 
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        // Client code using the adapter
+        LegacyPrinter legacyPrinter = new LegacyPrinter();
+        PrinterAdapter printerAdapter = new PrinterAdapter(legacyPrinter);
+        Client client = new Client(printerAdapter);
+
+        client.Print("Hello, Adapter Pattern!");
+
+        // Output will be:
+        // Legacy Printer: Hello, Adapter Pattern!
+    }
+}
+
 // Existing class with an incompatible interface
 public class LegacyPrinter
 {
@@ -50,22 +66,6 @@ public class Client
     public void Print(string text)
     {
         printer.PrintText(text);
-    }
-}
-
-public class Program
-{
-    public static void Main(string[] args)
-    {
-        // Client code using the adapter
-        LegacyPrinter legacyPrinter = new LegacyPrinter();
-        PrinterAdapter printerAdapter = new PrinterAdapter(legacyPrinter);
-        Client client = new Client(printerAdapter);
-
-        client.Print("Hello, Adapter Pattern!");
-
-        // Output will be:
-        // Legacy Printer: Hello, Adapter Pattern!
     }
 }
 ```
