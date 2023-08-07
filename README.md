@@ -1,5 +1,7 @@
 # GoF_Csharp_Adapter_Pattern
 
+Converts the interface of one class into another interface that clients expect.
+
 Suppose we have an existing LegacyPrinter class with an incompatible interface that clients are currently using. We want to create an adapter class that converts the interface of LegacyPrinter into a new interface called IPrinter that clients expect.
 
 ```csharp
