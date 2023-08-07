@@ -72,8 +72,9 @@ public class Client
 }
 ```
 
+## How to setup Github actions
 
-
+![Csharp Github actions](https://github.com/luiscoco/GoF_Csharp-6.Adapter_Pattern/assets/32194879/d804a168-a8d6-4ff3-9133-ba8cc0e5b39b)
 
 
 
